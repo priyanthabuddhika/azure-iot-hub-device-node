@@ -1,0 +1,20 @@
+{
+  "name": "iot-hub-simulated-device",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.3",
+    "azure-iot-device": "1.18.3",
+    "azure-iot-device-mqtt": "1.16.3",
+    "azure-iot-security-symmetric-key": "1.8.2",
+    "crypto": "^1.0.1",
+    "crypto.js": "^3.1.2",
+    "lodash": "^4.17.21"
+  }
+}
