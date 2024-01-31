@@ -15,16 +15,22 @@ function main() {
   setInterval(() => {
     const date = new Date();
     const data = JSON.stringify({
-      "deviceId": "<DEVICE-ID>",
-      "time_stamp": date,
-      "power": Number.parseFloat((Math.random() * (50 - 30 + 1)) + 30).toFixed(2).toString(),
-      "voltage": Number.parseFloat((Math.random() * (250 - 210 + 1)) + 210).toFixed(2).toString(),
-      "current": Number.parseFloat((Math.random() * (15 - 1 + 1)) + 1).toFixed(2).toString(),
-      "kva": Number.parseFloat((Math.random() * (50 - 30 + 1)) + 30).toFixed(2).toString(),
-      "state": "ON"
+      "Time": date,
+      "ENERGY": {
+        "TotalStartTime": date,
+        "Total": 0.001,
+        "Yesterday": 0,
+        "Today": 0.001,
+        "Period": 0,
+        "Power": Number.parseFloat((Math.random() * (100 - 75 + 1)) + 75).toFixed(2),
+        "ApparentPower": 12,
+        "ReactivePower": 11,
+        "Factor": 0.48,
+        "Voltage": Number.parseFloat((Math.random() * (250 - 210 + 1)) + 210).toFixed(2),
+        "Current": Number.parseFloat((Math.random() * (15 - 1 + 1)) + 1).toFixed(2)
+      }
     }
     );
-    
     sendTelemetry(client, data, 1).catch((err) => console.log('error ', err.toString()));
   }, 60000);
 }
