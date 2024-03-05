@@ -1,10 +1,13 @@
 'use strict';
 
+const { argv } = require('node:process');
+
 const Protocol = require('azure-iot-device-mqtt').Mqtt;
 
 const Message = require('azure-iot-device').Message;
 const Client = require('azure-iot-device').Client;
 let client = null;
+
 
 function main() {
   // open a connection to the device
@@ -31,7 +34,6 @@ function main() {
       }
     }
     );
-
     sendTelemetry(client, data, 1).catch((err) => console.log('error ', err.toString()));
   }, 60000);
 }

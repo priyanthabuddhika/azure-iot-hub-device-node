@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "start-plug-1": "node plug_1.js",
+    "start-plug-2": "node plug_2.js",
+    "start-plug-3": "node plug_3.js",
+    "start-plug-4": "node plug_4.js",
+    "start-ac-1": "node ac_1.js",
+    "start-ac-2": "node ac_2.js",
+    "start-ac-3": "node ac_3.js",
+    "start-ac-4": "node ac_4.js"
   },
   "author": "",
   "license": "ISC",
